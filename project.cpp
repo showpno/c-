@@ -6,10 +6,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-
-
-
 class product
 {
 	int product_number; //variable part
@@ -37,11 +33,7 @@ class product
 		cout<<endl<<"Please Enter The Quantity : ";
 		cin>>product_quantity;
 		cin.ignore();
-
-
-
 	}
-
 
 	void show_product() // DISPLAY KORBE
 	{
@@ -51,8 +43,6 @@ class product
 		cout<<endl<<"Product Price: "<<product_price;
 		cout<<endl<<"Discount : "<<product_discount<<" %";
 		cout<<endl<<"Quantity : "<<product_quantity;
-
-
 	}
 
 	int getProduct() // PRODUCT WILL BE RETURN FROM THE FUNCTION
@@ -82,16 +72,9 @@ class product
 	{
 		return product_quantity;
 	}
-
-
 };
-
-
-
 fstream fp;
 product produc;
-
-
 void save_product()
 {
 	fp.open("database.dat",ios::out|ios::app);
@@ -100,10 +83,7 @@ void save_product()
 	fp.close();
 	cout<<endl<<endl<<"The Product Has Been Sucessfully Created...";
 	getchar();
-
 }
-
-
 void show_all_product() // DISPLAY PRODUCT
 {
 	system("cls");
@@ -219,13 +199,7 @@ void display_record()//search product
 
 			default :cout<<"Invalid Input...\n";
 		}
-
-
-
 }
-
-
-
 void edit_product() // MODIFY PRODUCT
 {
 	int num;
@@ -254,8 +228,6 @@ void edit_product() // MODIFY PRODUCT
 		cout<<endl<<endl<<"Record Not Found...";
 	getchar();
 }
-
-
 void delete_product() // DELETE PRODUCT
 {
 	int num;
@@ -280,8 +252,6 @@ void delete_product() // DELETE PRODUCT
 	cout<<endl<<endl<<"\tRecord Deleted...";
 	getchar();
 }
-
-
 void product_menu() //BUY PRODUCT ER FUCTION PRODUCT SHOW KORBE THEN BUY KORBE
 {
 	system("cls");
@@ -297,9 +267,6 @@ void product_menu() //BUY PRODUCT ER FUCTION PRODUCT SHOW KORBE THEN BUY KORBE
 	}
 	fp.close();
 }
-
-
-
 void place_order() // PRODUCT SHOW KORAR POR BUY HOBE ....
 {
 	int order_arr[50],quan[50],c=0;
@@ -344,9 +311,6 @@ void place_order() // PRODUCT SHOW KORAR POR BUY HOBE ....
 	cout<<"\n\n\n\n press any key to continue : ";
 	getchar();
 }
-
-
-
 void admin_menu() // MENU SOB FUNCTION ER
 {
 	system("cls");
@@ -360,7 +324,6 @@ void admin_menu() // MENU SOB FUNCTION ER
 	cout<<"\n\tPress 6 to BUY A PRODUCT";
 	cout<<"\n\tPress 7 to EXIT \n";
 	cout<<"\t===========================================\n";
-
 	cout<<"\n\n\tOption: ";
 	cin>>option;
 	switch(option)
@@ -439,10 +402,7 @@ bool authenticateUser(string username, string password) {
     cout<<"Invalid user name or password";
 
     User();
-
-
 }
-
 void resetPassword() {
     string username, newPassword;
     cout << "Enter username: ";
@@ -504,11 +464,8 @@ int choice;
             User();
             break;
     }
-
-
 }
 };
-
 int main(int argc, char *argv[])
 {
 	system("cls");
@@ -534,9 +491,6 @@ int main(int argc, char *argv[])
     const int num_frames = sizeof(loading_frames) / sizeof(loading_frames[0]);
     const int frame_delay_ms = 100;
     const int console_width = 80;
-
-
-
     for (int i = 0; i < num_frames; i++) {
         cout << loading_frames[i] << "\r" << flush;
         this_thread::sleep_for(chrono::milliseconds(frame_delay_ms));
@@ -559,7 +513,6 @@ default:
 		User();
 		break;
 	}
-
 	int option;
 
 	for(;;) // PROTITA FUNCTION ER KAJ SESH E SHOW KORE MAIN MENU TE NIYE JAWAR JONNO BA PRODUCT BUY KORAR JONNO BA EXIT ER JONNO
